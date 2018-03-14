@@ -1,0 +1,16 @@
+//
+// Created by bizzi on 14/03/18.
+//
+
+#ifndef HW0_VARIE_H
+#define HW0_VARIE_H
+
+#endif //HW0_VARIE_H
+
+double rand_from(double min, double max);
+
+void append_to_file (char* fileName, char* string);
+
+void clean_file(char* fileName);
+
+void fill_vector(double* vector, int n);
