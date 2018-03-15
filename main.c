@@ -42,6 +42,8 @@ int main() {
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2+(pow(i,3)))/span;
+        span/=pow(10,9);
+        if (span==FP_INFINITE)
         sprintf(result,"ijk;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -53,6 +55,7 @@ int main() {
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2+(pow(i,3)))/span;
+        span/=pow(10,9);
         sprintf(result,"jik;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -63,6 +66,8 @@ int main() {
         mat_mat_ikj(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
+        span=(2+(pow(i,3)))/span;
+        span/=pow(10,9);
         sprintf(result,"ikj;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -74,6 +79,7 @@ int main() {
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2+(pow(i,3)))/span;
+        span/=pow(10,9);
         sprintf(result,"jki;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -85,6 +91,7 @@ int main() {
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2+(pow(i,3)))/span;
+        span/=pow(10,9);
         sprintf(result,"kij;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -96,6 +103,7 @@ int main() {
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2+(pow(i,3)))/span;
+        span/=pow(10,9);
         sprintf(result,"kji;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -103,10 +111,11 @@ int main() {
 
         //Strategia IJ
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_vet_ij(i,A,x,y);
+        mat_vet_ij(i,A,i,x,y);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=((pow(i,2)))/span;
+        span/=pow(10,9);
         sprintf(result,"ij;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -114,10 +123,11 @@ int main() {
 
         //Strategia JI
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_vet_ji(i,A,x,y);
+        mat_vet_ji(i,A,i,x,y);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=((pow(i,2)))/span;
+        span/=pow(10,9);
         sprintf(result,"ji;%d;%.2f",i,span);
         append_to_file(fileName,result);
 

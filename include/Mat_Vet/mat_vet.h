@@ -7,6 +7,6 @@
 
 #endif //HW0_MAT_VET_H
 
-void mat_vet_ij(int N, double* A, double* x, double* y);
+void mat_vet_ij(int n, double* A, int lda, double* x, double* y);
 
-void mat_vet_ji(int N, double* A, double* x, double* y);
+void mat_vet_ji(int n, double* A, int lda, double* x, double* y);
