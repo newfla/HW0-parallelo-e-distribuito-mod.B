@@ -43,7 +43,6 @@ int main() {
         span=etime-btime;
         span=(2+(pow(i,3)))/span;
         span/=pow(10,9);
-        if (span==FP_INFINITE)
         sprintf(result,"ijk;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
