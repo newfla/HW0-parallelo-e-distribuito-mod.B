@@ -115,6 +115,8 @@ int main() {
         span=etime-btime;
         span=((pow(i,2)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"ij;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -127,6 +129,8 @@ int main() {
         span=etime-btime;
         span=((pow(i,2)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"ji;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
