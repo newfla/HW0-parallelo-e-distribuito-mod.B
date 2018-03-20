@@ -113,7 +113,7 @@ int main() {
         mat_vet_ij(i,A,i,x,y);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=((pow(i,2)))/span;
+        span=(pow(i,2))/span;
         span/=pow(10,9);
         if (!isfinite(span))
             span=0;
@@ -127,7 +127,7 @@ int main() {
         mat_vet_ji(i,A,i,x,y);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=((pow(i,2)))/span;
+        span=(pow(i,2))/span;
         span/=pow(10,9);
         if (!isfinite(span))
             span=0;
