@@ -120,7 +120,7 @@ int main() {
 
         //Strategia IJ
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_vet_ij(i,A,i,x,y);
+        mat_vet_ij(i,i,(double (*)[])A,x,y);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(pow(i,2))/span;
@@ -134,7 +134,7 @@ int main() {
 
         //Strategia JI
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_vet_ji(i,A,i,x,y);
+        mat_vet_ji(i,i,(double (*)[])A,x,y);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(pow(i,2))/span;
