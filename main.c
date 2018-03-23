@@ -7,7 +7,7 @@
 #include <memory.h>
 #include <math.h>
 
-#define MAXITER 500
+#define MAXITER 200
 
 int main() {
     char* fileName="../Test.csv",
@@ -38,7 +38,7 @@ int main() {
 
         //Strategia IJK
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_mat_ijk(i,i,i,i,i,i,A,B,C);
+        mat_mat_ijk(i,i,i,i,i,i,(double (*)[])A,(double (*)[])B,(double (*)[])C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
@@ -52,7 +52,7 @@ int main() {
 
         //Strategia JIK
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_mat_jik(i,i,i,i,i,i,A,B,C);
+        mat_mat_jik(i,i,i,i,i,i,(double (*)[])A,(double (*)[])B,(double (*)[])C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
@@ -66,7 +66,7 @@ int main() {
 
         //Strategia IKJ
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_mat_ikj(i,i,i,i,i,i,A,B,C);
+        mat_mat_ikj(i,i,i,i,i,i,(double (*)[])A,(double (*)[])B,(double (*)[])C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
@@ -78,7 +78,7 @@ int main() {
 
         //Strategia JKI
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_mat_jki(i,i,i,i,i,i,A,B,C);
+        mat_mat_jki(i,i,i,i,i,i,(double (*)[])A,(double (*)[])B,(double (*)[])C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
@@ -92,7 +92,7 @@ int main() {
 
         //Strategia KIJ
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_mat_kij(i,i,i,i,i,i,A,B,C);
+        mat_mat_kij(i,i,i,i,i,i,(double (*)[])A,(double (*)[])B,(double (*)[])C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
@@ -106,7 +106,7 @@ int main() {
 
         //Strategia KJI
         btime = get_cur_time(); //inizio blocco da monitorare
-        mat_mat_kji(i,i,i,i,i,i,A,B,C);
+        mat_mat_kji(i,i,i,i,i,i,(double (*)[])A,(double (*)[])B,(double (*)[])C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
