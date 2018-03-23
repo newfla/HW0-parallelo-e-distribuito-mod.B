@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 project(HW0 C)
 
 set(CMAKE_C_STANDARD 11)
-
+set(CMAKE_C_FLAGS "-O3")
 # aggiungo la directory-root da dove pescare le librerie
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 

@@ -7,7 +7,7 @@
 #include <memory.h>
 #include <math.h>
 
-#define MAXITER 200
+#define MAXITER 500
 
 int main() {
     char* fileName="../Test.csv",
@@ -41,8 +41,10 @@ int main() {
         mat_mat_ijk(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=(2+(pow(i,3)))/span;
+        span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"ijk;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -53,8 +55,10 @@ int main() {
         mat_mat_jik(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=(2+(pow(i,3)))/span;
+        span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"jik;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -65,7 +69,7 @@ int main() {
         mat_mat_ikj(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=(2+(pow(i,3)))/span;
+        span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
         sprintf(result,"ikj;%d;%.2f",i,span);
         append_to_file(fileName,result);
@@ -77,8 +81,10 @@ int main() {
         mat_mat_jki(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=(2+(pow(i,3)))/span;
+        span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"jki;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -89,8 +95,10 @@ int main() {
         mat_mat_kij(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=(2+(pow(i,3)))/span;
+        span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"kij;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -101,8 +109,10 @@ int main() {
         mat_mat_kji(i,i,i,i,i,i,A,B,C);
         etime = get_cur_time();  //fine blocco da monitorare
         span=etime-btime;
-        span=(2+(pow(i,3)))/span;
+        span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0;
         sprintf(result,"kji;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
