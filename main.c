@@ -44,7 +44,7 @@ int main() {
         span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
         if (!isfinite(span))
-            span=0;
+            span=0.01;
         sprintf(result,"ijk;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -58,7 +58,7 @@ int main() {
         span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
         if (!isfinite(span))
-            span=0;
+            span=0.01;
         sprintf(result,"jik;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -71,6 +71,8 @@ int main() {
         span=etime-btime;
         span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
+        if (!isfinite(span))
+            span=0.01;
         sprintf(result,"ikj;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -84,7 +86,7 @@ int main() {
         span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
         if (!isfinite(span))
-            span=0;
+            span=0.01;
         sprintf(result,"jki;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -98,7 +100,7 @@ int main() {
         span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
         if (!isfinite(span))
-            span=0;
+            span=0.01;
         sprintf(result,"kij;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -112,7 +114,7 @@ int main() {
         span=(2*(pow(i,3)))/span;
         span/=pow(10,9);
         if (!isfinite(span))
-            span=0;
+            span=0.01;
         sprintf(result,"kji;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
@@ -140,7 +142,7 @@ int main() {
         span=(pow(i,2))/span;
         span/=pow(10,9);
         if (!isfinite(span))
-            span=0;
+            span=0.01;
         sprintf(result,"ji;%d;%.2f",i,span);
         append_to_file(fileName,result);
 
