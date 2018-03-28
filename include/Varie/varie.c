@@ -4,12 +4,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
 #define MIN 10
 #define MAX 30
 
 /* generate a random floating point number from min to max */
 double rand_from(double min, double max)
 {
+    srand(time(NULL));
     double range = (max - min);
     double div = RAND_MAX / range;
     return min + (rand() / div);
