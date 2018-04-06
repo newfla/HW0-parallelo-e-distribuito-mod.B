@@ -148,6 +148,10 @@ int main() {
 
         memset(y, 0, sizeof(double)*(MAXITER));
     }
-
+    free(A);
+    free(B);
+    free(C);
+    free(x);
+    free(y);
     return 0;
 }
